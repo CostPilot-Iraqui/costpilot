@@ -1,0 +1,147 @@
+{
+  "project_name": "CostPilot Senior",
+  "design_philosophy": {
+    "archetype": "Swiss & High-Contrast (Authority, Clarity, Truth)",
+    "vibe": "Sober, Elegant, Premium B2B, Architectural Precision",
+    "core_principles": [
+      "Density is Information: Use compact rows for data, but generous padding for containers.",
+      "The 'Swiss' Grid: Strict alignment, 1px borders, minimal shadows.",
+      "Function over Decoration: Color is used only for status (Green=Good, Red=Bad, Blue=Action).",
+      "French First: All interface text, dates, and currency formats must be French (e.g., 1 234,56 €)."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "\"Plus Jakarta Sans\", \"Inter\", sans-serif",
+      "body": "\"Inter\", \"Roboto\", sans-serif",
+      "mono": "\"JetBrains Mono\", monospace"
+    },
+    "scale": {
+      "h1": "text-4xl font-bold tracking-tight text-slate-900",
+      "h2": "text-2xl font-semibold tracking-tight text-slate-900",
+      "h3": "text-xl font-medium text-slate-900",
+      "body": "text-sm text-slate-600 leading-relaxed",
+      "small": "text-xs text-slate-500",
+      "label": "text-xs font-medium uppercase tracking-wider text-slate-500"
+    },
+    "rules": [
+      "Use 'Plus Jakarta Sans' for all headings (h1-h3).",
+      "Use 'Inter' for all body text, tables, and inputs.",
+      "Use 'JetBrains Mono' for numeric codes (Project ID, SKU).",
+      "Tabular data (money) must use 'font-variant-numeric: tabular-nums' for alignment."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#0F172A", 
+        "foreground": "#F8FAFC"
+      },
+      "secondary": {
+        "DEFAULT": "#F1F5F9",
+        "foreground": "#0F172A"
+      },
+      "accent": {
+        "DEFAULT": "#F8FAFC",
+        "foreground": "#0F172A"
+      },
+      "muted": {
+        "DEFAULT": "#F1F5F9",
+        "foreground": "#64748B"
+      },
+      "border": "#E2E8F0",
+      "background": "#FFFFFF",
+      "surface": "#F8FAFC"
+    },
+    "functional": {
+      "success": "#10B981", 
+      "warning": "#F59E0B", 
+      "error": "#EF4444", 
+      "info": "#3B82F6",
+      "locked": "#E2E8F0"
+    },
+    "usage_rules": [
+      "Backgrounds: Main content area is always #FFFFFF. Sidebar can be #F8FAFC or #0F172A (User preference: Light theme, so default to Light Sidebar with 1px border).",
+      "Borders: Use extensive 1px borders (#E2E8F0) to define structure instead of shadows.",
+      "Locked Areas: Use 'bg-slate-100' and 'text-slate-400' for locked macro budget sections.",
+      "Text: Primary text is Slate-900. Secondary text is Slate-500. Never use pure black."
+    ]
+  },
+  "layout": {
+    "grid_system": "Use a 12-column grid for dashboards. Gaps should be 'gap-4' (tight) for data density.",
+    "spacing": {
+      "container_padding": "p-6 or p-8",
+      "element_spacing": "space-y-4 or space-x-4",
+      "section_gap": "gap-8"
+    },
+    "structure": [
+      "Sidebar (Left): Fixed width (260px). Navigation links.",
+      "Header (Top): Minimal height (64px). Breadcrumbs, Actions, User Profile.",
+      "Main Content: Scrollable area. Max-width constraint (max-w-7xl) for readability on large screens.",
+      "Data Tables: Full width. Sticky header."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "default": "rounded-md px-4 py-2 font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 disabled:pointer-events-none disabled:opacity-50",
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 shadow-sm",
+      "secondary": "bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 shadow-sm",
+      "ghost": "hover:bg-slate-100 text-slate-700",
+      "destructive": "bg-red-600 text-white hover:bg-red-700"
+    },
+    "cards": {
+      "style": "bg-white border border-slate-200 rounded-lg shadow-sm",
+      "header": "px-6 py-4 border-b border-slate-100",
+      "content": "p-6"
+    },
+    "inputs": {
+      "style": "flex h-9 w-full rounded-md border border-slate-200 bg-white px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "tables": {
+      "wrapper": "relative w-full overflow-auto border border-slate-200 rounded-md",
+      "header_row": "border-b border-slate-200 bg-slate-50 hover:bg-slate-50/50",
+      "row": "border-b border-slate-100 transition-colors hover:bg-slate-50/50 data-[state=selected]:bg-slate-50",
+      "cell": "p-3 align-middle [&:has([role=checkbox])]:pr-0 font-medium text-slate-700"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "Very subtle. 'shadow-sm' is the default. 'shadow-md' only for dropdowns/modals.",
+    "borders": "Primary delimiter. Use 'border-slate-200' everywhere.",
+    "radius": "rounded-md (6px) or rounded-lg (8px). Avoid fully rounded (pill) shapes for containers.",
+    "glassmorphism": "Use sparingly. Only for sticky headers: 'bg-white/80 backdrop-blur-md border-b border-slate-200'."
+  },
+  "image_urls": {
+    "login_background": {
+      "url": "https://images.unsplash.com/photo-1724940434663-c60bbf968683?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJjaGl0ZWN0dXJlJTIwYnVpbGRpbmclMjBjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwYmx1ZXByaW50JTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3NzM0MDgzOTh8MA&ixlib=rb-4.1.0&q=85",
+      "desc": "Abstract minimalist building facade, conveys stability and structure."
+    },
+    "empty_state_project": {
+      "url": "https://images.unsplash.com/photo-1768269378478-49d80e2320b7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJjaGl0ZWN0dXJlJTIwYnVpbGRpbmclMjBjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwYmx1ZXByaW50JTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3NzM0MDgzOTh8MA&ixlib=rb-4.1.0&q=85",
+      "desc": "Unfinished concrete structure, implies 'Start your project'."
+    },
+    "hero_scaffold": {
+       "url": "https://images.unsplash.com/photo-1646178829333-715fb0414823?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJjaGl0ZWN0dXJlJTIwYnVpbGRpbmclMjBjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwYmx1ZXByaW50JTIwY2xvc2UlMjB1cHxlbnwwfHx8fDE3NzM0MDgzOTh8MA&ixlib=rb-4.1.0&q=85",
+       "desc": "Scaffolding, represents 'Work in Progress' or 'Management'."
+    }
+  },
+  "instructions_to_main_agent": [
+    "LANGUAGE: The entire UI must be in FRENCH. (e.g., 'Dashboard' -> 'Tableau de bord', 'Settings' -> 'Paramètres', 'Cost' -> 'Coût').",
+    "THEME: Force Light Mode. Do not implement a dark mode toggle. Use the 'class' strategy in Tailwind but default to light colors.",
+    "DATA TABLES: This is the core of the app. Use a robust table component (Tanstack Table or Shadcn Table) with sorting, filtering, and pagination.",
+    "NUMBERS: Format all currency as '1 234,00 €' (French locale).",
+    "LOCKED SECTIONS: When a macro budget envelope is locked, the inputs should be disabled and the background should be 'bg-slate-100'. Add a 'Lock' icon.",
+    "PDF EXPORT: Create a dedicated 'Print Layout' CSS or component for generating clean, signature-ready PDFs.",
+    "CHARTS: Use Recharts. Style them minimally (thin lines, small dots). Tooltips should be clean white cards with shadow.",
+    "SIDEBAR: Use a vertical sidebar on the left. Active state: 'bg-slate-100 text-slate-900 border-r-2 border-slate-900'. Inactive: 'text-slate-500 hover:text-slate-900'.",
+    "EMPTY STATES: Use the provided images for empty states (e.g., 'No Projects Found').",
+    "INITIALIZATION: The 'Project Initialization Wizard' should be a step-by-step form (stepper) with clear validation."
+  ],
+   "universal_guidelines": [
+    "Don't make generic centered layouts. Use density.",
+    "Create depth through layered design elements with z-index hierarchy (e.g., sticky headers over content).",
+    "Use glass-morphism effects only for sticky overlays.",
+    "Use 'sonner' for toasts.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports."
+  ]
+}
